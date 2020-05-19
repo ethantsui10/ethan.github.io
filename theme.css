@@ -88,6 +88,10 @@ header::before {
 
   }
 
+  .Form .Intro a:link, a:visited{
+    color: grey;
+  }
+
 
   .Form .UIRadio{
     margin-left: auto;
