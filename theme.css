@@ -15,7 +15,7 @@ body {
 }
 
 
-a:visited{
+a:link, a:visited{
   color: grey;
 }
 
