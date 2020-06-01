@@ -28,22 +28,50 @@
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
-	Dietary Preference:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	Dietary Preference:<br>
+
+
+
+		<label><input type="radio" name = "Radio" value="Vegetarian" id="Veg" onchange="populateListProductChoices(this.id, 'displayProduct')"> Vegetarian Options Preferred</label><br>
+		<label><input type="radio" name = "Radio" value="GlutenFree" id="GF" onchange="populateListProductChoices(this.id, 'displayProduct')"> Gluten Free Options Preferred</label><br>
+		<label><input type="radio" name = "Radio" value="VegAndGluten" id="VandGF" onchange="populateListProductChoices(this.id, 'displayProduct')"> Vegetarian and Gluten Free Options Preferred</label><br>
+		<label><input type="radio" name = "Radio" value="Organic" id="Org" onchange="populateListProductChoices(this.id, 'displayProduct')"> Organic Options Preferred</label><br>
+		<label><input type="radio" name = "Radio" value="None" id="None" onchange="populateListProductChoices(this.id, 'displayProduct')"> None</label><br>
+
+
+
+	<!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
 	<option value=""></option>
 	<option value="Vegetarian">Vegetarian</option>
     <option value="GlutenFree">Gluten Free Diet Preferred</option>
     <option value="VegAndGluten">Vegetarian and GlutenFree Diet Preferred</option>
     <option value="Organic">Organic</option>
     <option value="None">None</option>
-	</select><br>
+	</select><br> -->
 
 </div>
 
 <div id="Products" class="tabcontent">
   <h3>Your targeted products</h3>
   <p>We preselected products based on your preferences.</p>
-	 Choose items to buy:
+	 Choose items to buy:<br>
+
+	 Grocery Filter Options:
+	<select id="filter" name="filter" onchange="filterProducts(this.id, 'displayProduct')">
+ 	<option value="Choose Filter">Choose Filter:</option>
+ 	<option value="vegetable">Vegetables</option>
+     <option value="fruit">Fruit</option>
+     <option value="bread">Bread</option>
+     <option value="pizza">Pizza</option>
+     <option value="meat">Meat</option>
+		 <option value="drinks">Drinks</option>
+		 <option value="dairy/produce">Dairy/Produce</option>
+		 <option value="fish">Fish</option>
+
+ 	</select><br>
+
+
+
 	 <div id="displayProduct" class="filteredProd">
 			<form>
 			</form>
@@ -61,6 +89,7 @@
 
 <script src="lab3groceries.js"></script>
 <script src="lab3main.js"></script>
+<!-- <script src="testing.js"></script> -->
 
 <footer>
   <p>Website designed by Ethan Tsui</p>

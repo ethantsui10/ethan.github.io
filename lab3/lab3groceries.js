@@ -8,6 +8,7 @@ var products = [
   vegetarian: true,
   glutenFree: true,
   organic: false,
+  type: "vegetable",
   img: "broco.jpg",
   price: 1.99
 },
@@ -17,6 +18,7 @@ var products = [
   glutenFree: true,
   organic: true,
   img: "broco.jpg",
+  type: "vegetable",
   price: 2.99
 },
 {
@@ -25,6 +27,7 @@ var products = [
   glutenFree: false,
   organic: false,
   img: "bread.jpg",
+  type: "bread",
   price: 2.35
 },
 {
@@ -33,6 +36,7 @@ var products = [
   glutenFree: true,
   organic: false,
   img: "salmon.jpg",
+  type: "fish",
   price: 10.00
 },
 {
@@ -41,6 +45,7 @@ var products = [
   glutenFree: true,
   organic: false,
   img: "apple.jpg",
+  type: "fruit",
   price: 3.75
 },
 {
@@ -49,6 +54,7 @@ var products = [
   glutenFree: true,
   organic: true,
   img: "apple.jpg",
+  type: "fruit",
   price: 4.75
 },
 {
@@ -57,6 +63,7 @@ var products = [
   glutenFree: true,
   organic: false,
   img: "orange.jpg",
+  type: "fruit",
   price: 4.50
 },
 {
@@ -65,6 +72,7 @@ var products = [
   glutenFree: true,
   organic: true,
   img: "orange.jpg",
+  type: "fruit",
   price: 5.50
 },
 {
@@ -73,6 +81,7 @@ var products = [
   glutenFree: true,
   organic: false,
   img: "beef.jpg",
+  type: "meat",
   price: 12.00
 },
 {
@@ -81,6 +90,7 @@ var products = [
   glutenFree: true,
   organic: false,
   img: "chicken.jpg",
+  type: "meat",
   price: 9.00
 },
 {
@@ -89,6 +99,7 @@ var products = [
   glutenFree: true,
   organic: false,
   img: "turkey.jpg",
+  type: "meat",
   price: 8.50
 },
 {
@@ -97,6 +108,7 @@ var products = [
   glutenFree: true,
   organic: true,
   img: "yogurt.jpg",
+  type: "dairy/produce",
   price: 5.45
 },
 {
@@ -105,6 +117,7 @@ var products = [
   glutenFree: false,
   organic: false,
   img: "cheesepizza.jpg",
+  type: "pizza",
   price: 8.00
 },
 {
@@ -113,6 +126,7 @@ var products = [
   glutenFree: true,
   organic: false,
   img: "milk.jpg",
+  type: "dairy/produce",
   price: 7.75
 },
 {
@@ -121,7 +135,17 @@ var products = [
   glutenFree: true,
   organic: true,
   img: "eggs.jpg",
+  type: "dairy/produce",
   price: 11.00
+},
+{
+  name: "coke",
+  vegetarian: true,
+  glutenFree: true,
+  organic: false,
+  img: "coke.jpg",
+  type: "drinks",
+  price: .99
 }
 ];
 
@@ -164,6 +188,7 @@ function restrictListProducts(prods, restriction) {
     }
   }
 
+
   product_prices.sort(function(a, b){
     return a - b;
   });
@@ -188,6 +213,89 @@ function restrictListProducts(prods, restriction) {
 
   return prodContain;
 }
+
+
+function filterProd(prods, type) {
+  let product_names = [];
+  let product_prices = [];
+  let product_final = [];
+  let prod_imgs = [];
+
+  for (let i=0; i<prods.length; i+=1) {
+    if ((type == "vegetable") && (prods[i].type == "vegetable")){
+      product_names.push(prods[i]);
+      deciFixed = prods[i].price.toFixed(2);
+      product_prices.push(deciFixed);
+    }
+    else if ((type == "fruit") && (prods[i].type == "fruit")){
+      product_names.push(prods[i]);
+      deciFixed = prods[i].price.toFixed(2);
+      product_prices.push(deciFixed);
+    }
+    else if ((type == "fish") && (prods[i].type == "fish")){
+      product_names.push(prods[i]);
+      deciFixed = prods[i].price.toFixed(2);
+      product_prices.push(deciFixed);
+    }
+    else if ((type == "bread") && (prods[i].type == "bread")){
+      product_names.push(prods[i]);
+      deciFixed = prods[i].price.toFixed(2);
+      product_prices.push(deciFixed);
+    }
+    else if ((type == "meat") && (prods[i].type == "meat")){
+      product_names.push(prods[i]);
+      deciFixed = prods[i].price.toFixed(2);
+      product_prices.push(deciFixed);
+    }
+    else if ((type == "drinks") && (prods[i].type == "drinks")){
+      product_names.push(prods[i]);
+      deciFixed = prods[i].price.toFixed(2);
+      product_prices.push(deciFixed);
+    }
+    else if ((type == "dairy/produce") && (prods[i].type == "dairy/produce")){
+      product_names.push(prods[i]);
+      deciFixed = prods[i].price.toFixed(2);
+      product_prices.push(deciFixed);
+    }
+    else if ((type == "pizza") && (prods[i].type == "pizza")){
+      product_names.push(prods[i]);
+      deciFixed = prods[i].price.toFixed(2);
+      product_prices.push(deciFixed);
+    }
+    else if (type == "Choose Filter"){
+      product_names.push(prods[i]);
+      deciFixed = prods[i].price.toFixed(2);
+      product_prices.push(deciFixed);
+    }
+
+  }
+
+
+  product_prices.sort(function(a, b){
+    return a - b;
+  });
+
+
+  for(let j = 0; j<product_prices.length; j+=1){
+    for(let k =0; k<prods.length; k+=1){
+      if(prods[k].price == product_prices[j]){
+        product_final.push(prods[k].name);
+        prod_imgs.push(prods[k].img);
+      }
+    }
+  }
+
+  for(let x = 0; x<product_prices.length; x++){
+    product_prices[x] = " " + "$"+product_prices[x];
+  }
+
+
+
+  prodContain = [product_final, product_prices, prod_imgs];
+
+  return prodContain;
+}
+
 
 
 // Calculate the total price of items, with received parameter being a list of products
