@@ -1,0 +1,83 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Style the tab */
+html{
+  font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 100%
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  display: inline-block;
+  float: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 14px;
+  transition: 0.3s;
+  font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: grey;
+  border-radius: 4px;
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab .tabbuttons button.active {
+  background-color: #ccc;
+}
+
+
+
+.tab h2{
+  color: grey;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
+.filteredProd{
+  display: grid;
+  grid-template-columns: 0fr 0fr 0fr;
+}
+
+.filteredProd img{
+  float: left;
+  width:  100px;
+  height: 100px;
+  object-fit: cover;
+  }
+
+
+
+footer{
+  text-align: center:
+}
