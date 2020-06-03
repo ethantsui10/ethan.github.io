@@ -17,9 +17,9 @@
 
 
 
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <!-- <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
   <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button> -->
 
 
 </div>
@@ -27,18 +27,18 @@
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
-	Dietary Preference:<br>
+  Tell us a bit about your diet.<br>
+	Please choose a dietary option that suits your dietary preferences:<br><br>
 
-
+	<div class=radiobutton>
 
 		<label><input type="radio" name = "Radio" value="Vegetarian" id="Veg" onchange="populateListProductChoices(this.id, 'displayProduct')"> Vegetarian Options Preferred</label><br>
 		<label><input type="radio" name = "Radio" value="GlutenFree" id="GF" onchange="populateListProductChoices(this.id, 'displayProduct')"> Gluten Free Options Preferred</label><br>
 		<label><input type="radio" name = "Radio" value="VegAndGluten" id="VandGF" onchange="populateListProductChoices(this.id, 'displayProduct')"> Vegetarian and Gluten Free Options Preferred</label><br>
 		<label><input type="radio" name = "Radio" value="Organic" id="Org" onchange="populateListProductChoices(this.id, 'displayProduct')"> Organic Options Preferred</label><br>
-		<label><input type="radio" name = "Radio" value="None" id="None" onchange="populateListProductChoices(this.id, 'displayProduct')"> None</label><br>
+		<label><input type="radio" name = "Radio" value="None" id="None" onchange="populateListProductChoices(this.id, 'displayProduct')"> None</label>
 
-
+	</div>
 
 	<!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
 	<option value=""></option>

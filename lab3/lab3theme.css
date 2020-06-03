@@ -4,22 +4,28 @@
 html{
   font-family: "Monument Extended", Arial, Helvetica, sans-serif;
   font-size: large;
+  align-items: center;
+  color: grey;
 }
 
-
-.tab {
+.tab{
+  display: block;
+  text-align: center;
+  color: black;
+}
+/* .tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   width: 100%
   margin: 0 auto;
   align-items: center;
-}
+} */
 
 
 
 /* Style the buttons that are used to open the tab content */
-.tab button {
+/* .tab button {
   background-color: inherit;
   display: inline-block;
   float: none;
@@ -33,40 +39,59 @@ html{
   color: grey;
   border-radius: 4px;
 
-}
+} */
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+/* .tab button:hover {
   background-color: #ddd;
-}
+} */
 
 /* Create an active/current tablink class */
-.tab .tabbuttons button.active {
+/* .tab .tabbuttons button.active {
   background-color: #ccc;
-}
+} */
 
 
-
+/*
 .tab h2{
   color: grey;
   text-align: center;
   display: inline-block;
   vertical-align: middle;
 
-}
+} */
 
 /* Style the tab content */
 .tabcontent {
-  display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+  text-align: center;
 }
 
+.tabcontent .radiobutton{
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 400px;
+}
+
+.tabcontent .radiobutton label{
+  text-align: left;
+}
+
+.tabcontent h3{
+  color: black;
+}
 
 .filteredProd{
   display: grid;
   grid-template-columns: 0fr 0fr 0fr;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 25%;
 }
 
 .filteredProd img{
@@ -75,6 +100,7 @@ html{
   height: 100px;
   object-fit: cover;
   }
+
 
 
 
