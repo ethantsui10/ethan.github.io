@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+
+<!-- SAM IMG https://www.bicycling.com/culture/a26363732/how-to-tip-bike-mechanic/ -->
+<!-- JAMES IMG https://www.heritagebikesandrentals.com/bike-mechanic-courses -->
+<!-- LEVI IMG https://motoworld.biz/category/bike-repair/ -->
+<!-- SHOP IMG https://www.montaguebikes.com/folding-bikes-blog/2017/07/new-hq-for-montague-australia/ -->
+<!-- TireRepair IMG https://www.rei.com/learn/expert-advice/flat-tire.html -->
+<!-- Tune up IMG https://www.groupon.com/deals/cyclemotive-toronto -->
+<!-- Electric Motor IMG https://www.youtube.com/watch?v=pWYEmBsLzwc -->
+<!-- HydroDip IMG https://twitter.com/AquaGraphixUK/status/837422094782709760/photo/1 -->
+<!-- CENTER IMAGE Source https://stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-bootstrap -->
+
+
+
+
+
+<head>
+    <title>West Coast Bike Shop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="lab4theme.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="container-md p-3 my-3 border bg-dark text-white">
+        <h1>West Coast Bike Shop</h1>
+        <p>We'll make you speedy!</p>
+        <p>123 Main Street, Vancouver, B.C., Canada</p>
+    </div>
+
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <!-- <div class="row p-3">
+        <div class="col-sm-3 pl-5">Service</div>
+        <div class="col-sm-3">Calendar</div>
+        <div class="col-sm-3">Payment</div>
+        <div class="col-sm-3">Where to find us<br>
+          123 Main Street, Vancouver, B.C., Canada
+
+        </div>
+    </div> -->
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <!-- <div class="container-md p-3 my-3 border bg-light text-success">
+        <h3>Let us tell you about our expertise</h3>
+        <p>We can <mark>cut hair</mark></p>
+        <p class="text-center" >Align wheels</p>
+        <p class="text-uppercase">Write in uppercase</p>
+        <p class="text-center text-uppercase" >centered and uppercase</p>
+    </div> -->
+    <div class="container">
+        <h2>Welcome to the Shop!</h2>
+        <p>West Coast Bike Shop is tailored to your bike needs! Please feel free to check out our store at, 123 Main Street, Vancouver, B.C., Canada! Also check out our services that we have to offer as well as some of our staff that run the shop!</p>
+        <img class="mx-auto d-block" src="shop.jpg" style="width:50%"/> <br>
+
+    </div>
+
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div class="container">
+        <h2>Services</h2>
+        <p>Here is a list of services offered at West Coast Bike Shop</p>
+        <table class=" table table-dark">
+            <thead>
+            <tr>
+                <th>Price</th>
+                <th>Services</th>
+                <th>Description</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                  <td> $40 </td>
+                  <td>Bike Tune Up</td>
+                  <td>Let us handle the touch up to optimize your bike to the max</td>
+            </tr>
+            <tr>
+                <td> $60 </td>
+                <td>Flat Tire Repair</td>
+                <td>Our skilled mechanics will be sure to get you back on the road/trail with fresh tires in no time</td>
+            </tr>
+            <tr>
+                <td> $75 </td>
+                <td>Frame Hydro-Dipping</td>
+                <td>In our speciality lab, you will be able to have your bike frame hydro-dipped into any custom design of your choice</td>
+            </tr>
+            <tr>
+                <td> $250 </td>
+                <td>Electic Motor Installation</td>
+                <td>Our skilled mechanics will easily be able to install an electric motor for your bike</td>
+            </tr>
+            </tbody>
+        </table>
+    </div><br>
+
+
+    <div class="container">
+      <h2>Service Photo Gallery</h2>
+      <p>Check out images of our services!</p>
+      <div class="card-columns">
+        <div class="card bg-dark" style="width:350px">
+            <img class="card-img-top" src="tuneup.jpg" alt="Card image" width = "200px" height = "200px">
+            <div class="card-body">
+                <!-- <h4 class="card-title">Tune Up Service</h4> -->
+                <p class="card-text">Bike Tune Up Service</p>
+            </div>
+        </div>
+        <div class="card bg-dark" style="width:350px">
+            <img class="card-img-top" src="tirereplace.jpg" alt="Card image" width = "200px" height = "200px">
+            <div class="card-body">
+                <!-- <h4 class="card-title">Tune Up Service</h4> -->
+                <p class="card-text">Tire Replacement Service</p>
+            </div>
+        </div>
+        <div class="card bg-dark" style="width:350px">
+            <img class="card-img-top" src="hydrodip.jpg" alt="Card image" width = "200px" height = "200px">
+            <div class="card-body">
+                <!-- <h4 class="card-title">Tune Up Service</h4> -->
+                <p class="card-text">Hydro-Dipping Service</p>
+            </div>
+        </div>
+        <div class="card bg-dark" style="width:350px">
+            <img class="card-img-top" src="electric.jpg" alt="Card image" width = "200px" height = "200px">
+            <div class="card-body">
+                <!-- <h4 class="card-title">Tune Up Service</h4> -->
+                <p class="card-text">Electric Motor Installation</p>
+            </div>
+        </div>
+      </div>
+
+    </div><br>
+
+
+    <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
+    <!-- These can be useful for making sure someone reads something before continuing -->
+    <!-- <div class="container">
+        <h2>Alert</h2>
+        <p>We have something important to say</p>
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Please read! </strong>You must read.
+        </div>
+    </div> -->
+
+    <!-- You'll certainly need buttons at some point in your site -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp -->
+    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
+    <!-- This idea is already part of the components in Bootstrap -->
+    <!-- <div class="container">
+        <h2>Button States</h2>
+        <button type="button" class="btn btn-warning">Primary Button</button>
+        <button type="button" class="btn btn-warning active">Active Primary</button>
+        <button type="button" class="btn btn-warning" disabled>Disabled Primary</button>
+    </div> -->
+
+
+    <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
+    <!-- Modals are useful for additional information or questions -->
+    <!-- Here the modal is used for a little survey -->
+    <!-- <div class="container">
+        <h2>Modal Example</h2> -->
+        <!-- Trigger the modal with a button -->
+        <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button> -->
+
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="mySurvey" role="dialog">
+            <div class="modal-dialog"> -->
+            <!-- Modal content-->
+            <!-- <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h2>How did you hear about us?</h2>
+                        <p>Tell us:</p>
+                        <form>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 1</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 2</label>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <!-- <div class="container-md p-3 my-3 border bg-warning text-white"> -->
+            <h2>Book an Appointment with us</h2>
+            <p>To save yourself time, book an appointment with us!</p>
+        <!-- </div> -->
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Here is our list of services</p>
+                        <label><input type="radio" name = "Radio" value="simplicity"> $40 - Bike Tune Up</label><br>
+                        <label><input type="radio" name = "Radio" value="Color Scheme">$60 - Flat Tire Repair</label><br>
+                        <label><input type="radio" name = "Radio" value="Efficiency">$75 - Frame Hydro-Dipping</label><br>
+                        <label><input type="radio" name = "Radio" value="Security">$250 - The security of the site</label>
+                    </div>
+                </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>What date?</p>
+                        <!-- Bootstrap has various input components. Some examples are given here: -->
+                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                        <div class="form-group row">
+                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                            <div class="col-10">
+                                <input class="form-control" type="datetime-local" value="06/06/2020 1:00 PM " id="dateTimeInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Provide your information so we can contact you</p>
+                        <!-- <p>Form to enter name, email, phone</p> -->
+                        <label for = "email">Please enter your email address below:</label><br>
+                        <input type="text" id="email" name="a1"><br><br>
+                        <button type="button" class="btn btn-primary">Book Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+
+    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal -->
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div class="container p-3">
+        <h2>Meet Our Mechanics</h2>
+        <div class="card-columns">
+            <!-- <div class="card bg-warning" style="width:200px">
+                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">James</h4>
+                    <p class="card-text">James has been working at West Coast Bike Shop for over 10 years. With such exeprience, he has proven to be one of the best mechanics in Vancouver!</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div> -->
+            <div class="card bg-dark" style="width:200px">
+                <img class="card-img-top" src="sam.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Sam</h4>
+                    <p class="card-text">The artist</p>
+                    <!-- collapsible part -->
+                    <a href="#James" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="James" class="collapse p-3">
+                        <p>Sam has been hydro-dipping bikes since he was 14 years old! He now leads the shop with his excellent talent and creativity!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-dark" style="width:200px">
+                <img class="card-img-top" src="james.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">James</h4>
+                    <p class="card-text">The bike whisperer</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>James has been working at West Coast Bike Shop for over 10 years. With such exeprience, he has proven to be one of the best mechanics in Vancouver!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-dark" style="width:200px">
+                <img class="card-img-top" src="levi.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Levi</h4>
+                    <p class="card-text">The Guru</p>
+                    <!-- collapsible part -->
+                    <a href="#Levi" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="Levi" class="collapse p-3">
+                        <p>Levi is the founder of the shop and has been around for years and puts pride into all aspects of the store!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- A different approach would be to make the whole staff information collapsible -->
+    <!-- Here a block button (taking the full width) opens/closes the collapsible -->
+    <!-- Here a single card is used, but card columns could be used -->
+    <!-- <div class="container">
+        <h2>More information</h2>
+        <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
+        <div id="mechanics" class="collapse">
+            <div class="card bg-warning" style="width:200px">
+                <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Erwind</h4>
+                    <p class="card-text">Erwind knows all about bikes.</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+
+
+</body>
+</html>
