@@ -17,3 +17,7 @@ h1 {
 .card-text{
   color: white;
 }
+
+.card-body p{
+  color: white;
+}
