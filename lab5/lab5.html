@@ -29,7 +29,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <!-- Your own additional style sheet -->
-    <link href="lab4theme.css" rel="stylesheet" type="text/css">
+    <link href="lab5theme.css" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -46,6 +46,26 @@
         <p>123 Main Street, Vancouver, B.C., Canada</p>
     </div>
 
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <!-- <div class="row p-3">
+        <div class="col-sm-3 pl-5">Service</div>
+        <div class="col-sm-3">Calendar</div>
+        <div class="col-sm-3">Payment</div>
+        <div class="col-sm-3">Where to find us<br>
+          123 Main Street, Vancouver, B.C., Canada
+
+        </div>
+    </div> -->
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <!-- <div class="container-md p-3 my-3 border bg-light text-success">
+        <h3>Let us tell you about our expertise</h3>
+        <p>We can <mark>cut hair</mark></p>
+        <p class="text-center" >Align wheels</p>
+        <p class="text-uppercase">Write in uppercase</p>
+        <p class="text-center text-uppercase" >centered and uppercase</p>
+    </div> -->
     <div class="container">
         <h2>Welcome to the Shop!</h2>
         <p>West Coast Bike Shop is tailored to your bike needs! Please feel free to check out our store at, 123 Main Street, Vancouver, B.C., Canada! Also check out our services that we have to offer as well as some of our staff that run the shop!</p>
@@ -94,7 +114,7 @@
     </div><br>
 
 
-    <div class="container" id = "gallery">
+    <div class="container" id="gallery">
       <h2>Service Photo Gallery</h2>
       <p>Check out images of our services!</p>
       <div class="card-columns">
@@ -131,7 +151,68 @@
     </div><br>
 
 
-    <div class="container" id = "bookapp">
+    <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
+    <!-- These can be useful for making sure someone reads something before continuing -->
+    <!-- <div class="container">
+        <h2>Alert</h2>
+        <p>We have something important to say</p>
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Please read! </strong>You must read.
+        </div>
+    </div> -->
+
+    <!-- You'll certainly need buttons at some point in your site -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp -->
+    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
+    <!-- This idea is already part of the components in Bootstrap -->
+    <!-- <div class="container">
+        <h2>Button States</h2>
+        <button type="button" class="btn btn-warning">Primary Button</button>
+        <button type="button" class="btn btn-warning active">Active Primary</button>
+        <button type="button" class="btn btn-warning" disabled>Disabled Primary</button>
+    </div> -->
+
+
+    <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
+    <!-- Modals are useful for additional information or questions -->
+    <!-- Here the modal is used for a little survey -->
+    <!-- <div class="container">
+        <h2>Modal Example</h2> -->
+        <!-- Trigger the modal with a button -->
+        <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button> -->
+
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="mySurvey" role="dialog">
+            <div class="modal-dialog"> -->
+            <!-- Modal content-->
+            <!-- <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h2>How did you hear about us?</h2>
+                        <p>Tell us:</p>
+                        <form>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 1</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 2</label>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div> -->
+
+    <div class="container">
         <!-- <div class="container-md p-3 my-3 border bg-warning text-white"> -->
             <h2>Book an Appointment with us</h2>
             <p>To save yourself time, book an appointment with us!</p>
@@ -170,6 +251,21 @@
             </div>
             <div class="card">
                 <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a mechanic</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="card-body">
+                          <p>West Coast's Mechanics</p>
+                          <label><input type="radio" name = "Radio" value="simplicity"> Sam The Artist</label><br>
+                          <label><input type="radio" name = "Radio" value="Color Scheme">James The Bike Whisperer</label><br>
+                          <label><input type="radio" name = "Radio" value="Efficiency">Levi The Guru</label><br>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
                     <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
                 </div>
                 <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
@@ -183,8 +279,6 @@
                 </div>
             </div>
         </div>
-      </div>
-
     </div><br>
 
 
@@ -192,7 +286,7 @@
     <!-- Card columns allows multiple cards next to each other -->
     <!-- The first card's button doesn't go anywhere, it could be a modal -->
     <!-- My second card limits the information seen and uses collapsible to show more -->
-    <div class="container" id="mech">
+    <div class="container" id ="mech">
         <h2>Meet Our Mechanics</h2>
         <div class="card-columns">
             <!-- <div class="card bg-warning" style="width:200px">
