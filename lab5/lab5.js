@@ -213,6 +213,14 @@ $(document).ready(function(){
         }
     );
 
+    $("#dateTimeInput").on("mouseenter", function(){
+        $("#dateTimeInput").addClass("showInput");
+    });
+
+    $("#dateTimeInput").on("mouseleave", function(){
+        $("#dateTimeInput").removeClass("showInput");
+    });
+
 
     // Look at the different events on which an action can be performed
     // https://www.w3schools.com/jquery/jquery_events.asp
