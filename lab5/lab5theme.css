@@ -37,7 +37,7 @@ h1 {
 }
 
 .ui-tooltip{
-
+  align-self: auto;
 }
 
 .ui-tooltip-content {
