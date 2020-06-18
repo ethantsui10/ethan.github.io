@@ -104,34 +104,21 @@ var samDates = [0,2,5];
 var jamesDates = [0,4];
 const setDateFormat = "mm/dd/yy";
 
+
 function disableDates(date) {
     // Sunday is Day 0, disable all Sundays
-    var w = null;
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    // if (date.getDay() == 0)
-    //     return [false];
-    // console.log(x);
+    if (x==2)
+      return [date.getDay()!= 0 && date.getDay()!= 2 && date.getDay()!=5];
 
-    if(x == 2){
-      // w = samDates
-      // return [ samDates.indexOf(string) == -1 ];
-      return[date.getDay()!= 0 && date.getDay()!= 2 && date.getDay()!=5]
-
-
-
-    }
     else if(x==1){
       return [date.getDay()!= 0 && date.getDay()!= 4];
     }
+
     else if(x==0){
       return [date.getDay()!= 1 && date.getDay()!= 3 && date.getDay()!=6];
     }
-  }
+}
 
-
-//     var string = jQuery.datepicker.formatDate(setDateFormat, date);
-//     return [ unavailableDates.indexOf(string) == -1 ]
-// }
 
 
 
@@ -173,11 +160,9 @@ $(document).ready(function(){
             minDate: new Date('06/01/2020'),
             maxDate: '+4M',
             // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
+            // beforeShowDay: $.datepicker.noWeekends,
             beforeShowDay: disableDates
-            // if (validateMech(mech) == 2){
-            //   beforeShowDay: samDates,
-            // }
+
         }
     );
 
