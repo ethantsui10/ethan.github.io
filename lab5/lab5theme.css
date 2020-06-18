@@ -34,4 +34,12 @@ h1 {
 
 #gallery .card-body p{
   color: white;
-}\
+}
+
+.ui-tooltip{
+
+}
+
+.ui-tooltip-content {
+  text-align: center;
+}

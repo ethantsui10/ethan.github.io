@@ -286,35 +286,35 @@ $(document).ready(function(){
 
 
 
-        $("#dateTimeInput").on("change", function(){
-            if (!validateDate("dateTimeInput")){
-                alert("Wrong format for date");
-                $("#dateTimeInput").val("mm/dd/yyyy");
-                $("#dateTimeInput").addClass("error");
-            }
-            else {
-                $("#dateTimeInput").removeClass("error");
-            }
-        });
-
-        $("#dateTimeInput").on("mouseenter", function(){
-            $("#dateTimeInput").addClass("showInput");
-        });
-
-        $("#dateTimeInput").on("mouseleave", function(){
-            $("#dateTimeInput").removeClass("showInput");
-        });
-
-
-
-        // https://jqueryui.com/tooltip/
-        // The class "highlight" used here is predefined in JQuery UI
-        // the message of the tooltip is encoded in the input (in the HTML file)
-        $("#dateTimeInput").tooltip({
-            classes: {
-              "ui-tooltip": "highlight"
-            }
-          });
+        // $("#dateTimeInput").on("change", function(){
+        //     if (!validateDate("dateTimeInput")){
+        //         alert("Wrong format for date");
+        //         $("#dateTimeInput").val("mm/dd/yyyy");
+        //         $("#dateTimeInput").addClass("error");
+        //     }
+        //     else {
+        //         $("#dateTimeInput").removeClass("error");
+        //     }
+        // });
+        //
+        // $("#dateTimeInput").on("mouseenter", function(){
+        //     $("#dateTimeInput").addClass("showInput");
+        // });
+        //
+        // $("#dateTimeInput").on("mouseleave", function(){
+        //     $("#dateTimeInput").removeClass("showInput");
+        // });
+        //
+        //
+        //
+        // // https://jqueryui.com/tooltip/
+        // // The class "highlight" used here is predefined in JQuery UI
+        // // the message of the tooltip is encoded in the input (in the HTML file)
+        // $("#dateTimeInput").tooltip({
+        //     classes: {
+        //       "ui-tooltip": "highlight"
+        //     }
+        //   });
 
 
 
