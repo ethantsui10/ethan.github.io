@@ -36,10 +36,13 @@ h1 {
   color: white;
 }
 
+
+
 .ui-tooltip{
   margin-left: auto;
 }
 
 .ui-tooltip-content {
   text-align: center;
+  visibility: hidden;
 }
