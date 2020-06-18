@@ -35,16 +35,15 @@ h1 {
 #gallery .card-body p{
   color: white;
 }
-/* 
-#credit .title{
-  visibility: hidden;
-} */
+
 
 
 .ui-tooltip{
   margin-left: auto;
+  background-color: lightgrey;
 }
 
 .ui-tooltip-content {
   text-align: center;
+  color: white;
 }
