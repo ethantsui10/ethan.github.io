@@ -36,6 +36,9 @@ h1 {
   color: white;
 }
 
+#credit .title{
+  visibility: hidden;
+}
 
 
 .ui-tooltip{
@@ -44,5 +47,4 @@ h1 {
 
 .ui-tooltip-content {
   text-align: center;
-  visibility: hidden;
 }
