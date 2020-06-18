@@ -9,7 +9,9 @@
 // or numbers
 var x = null;
 var y = null;
-
+var email = "abc@123.com";
+var cc = "1234 1234 1234 1234";
+var cc2 = "xxxx xxxx xxxx xxxx";
 
 function validatePhone(txtPhone) {
     var a = document.getElementById(txtPhone).value;
@@ -22,6 +24,29 @@ function validatePhone(txtPhone) {
     else {
         return false;
     }
+}
+
+function book(){
+  var dateInput = document.getElementById("dateTimeInput").value;
+  var ccInput = document.getElementById("credit").value;
+  var emailInput = document.getElementById("email").value;
+  console.log(dateInput);
+  console.log(ccInput);
+  console.log(emailInput);
+  console.log(y);
+  console.log(x);
+  if((dateInput == "" || dateInput.length == 0 || dateInput == null)||(ccInput == "" || ccInput.length == 0 || ccInput == null)||(emailInput == "" || emailInput.length == 0 || emailInput == null)||(y==null)||(x==null)){
+    document.getElementById("message").innerHTML = "Complete all fields";
+    console.log(cc);
+  }
+
+  else if(ccInput == cc || emailInput == email || ccInput == cc2){
+    document.getElementById("message").innerHTML = "Credit Card or Email cannot have default values";
+  }
+
+  else{
+    document.getElementById("message").innerHTML = "Appointment Booked";
+  }
 }
 
 function validateCard(txtCard) {
@@ -76,7 +101,22 @@ function validateDate(txtDate) {
 }
 
 function validateServ(serv){
+  var b = serv;
+  console.log(b);
+  if(b=="tune"){
+    y = 3;
+  }
+  else if(b=="tire"){
+    y = 2;
+  }
+  else if(b=="hydro"){
+    y = 1;
+  }
+  else if(b=="electric"){
+    y=0;
+  }
 
+  return y;
 }
 
 function validateMech(mech){

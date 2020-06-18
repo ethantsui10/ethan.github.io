@@ -84,7 +84,7 @@ https://stackoverflow.com/questions/6402743/regular-expression-for-mm-dd-yyyy-in
     <br>
 
     <div class="container">
-        <h2>Welcome to the Shop!</h2>
+        <h2><img src="iconsh.png" alt="logo" style="width:50px;">Welcome to the Shop!</h2>
         <p>West Coast Bike Shop is tailored to your bike needs! Please feel free to check out our store at, 123 Main Street, Vancouver, B.C., Canada! Also check out our services that we have to offer as well as some of our staff that run the shop!</p>
         <img class="mx-auto d-block" src="shop.jpg" style="width:50%"/> <br>
 
@@ -242,10 +242,10 @@ https://stackoverflow.com/questions/6402743/regular-expression-for-mm-dd-yyyy-in
                 <div id="collapseService" class="collapse show" data-parent="#accordion">
                     <div class="card-body">
                         <p>Here is our list of services</p>
-                        <label><input type="radio" name = "Radio" value="tune"> $40 - Bike Tune Up</label><br>
-                        <label><input type="radio" name = "Radio" value="tire">$60 - Flat Tire Repair</label><br>
-                        <label><input type="radio" name = "Radio" value="hydro">$75 - Frame Hydro-Dipping</label><br>
-                        <label><input type="radio" name = "Radio" value="electric">$250 - Electric Motor Installation</label>
+                        <label><input type="radio" name = "Radio" value="tune" onchange="validateServ(this.value)"> $40 - Bike Tune Up</label><br>
+                        <label><input type="radio" name = "Radio" value="tire" onchange="validateServ(this.value)">$60 - Flat Tire Repair</label><br>
+                        <label><input type="radio" name = "Radio" value="hydro" onchange="validateServ(this.value)">$75 - Frame Hydro-Dipping</label><br>
+                        <label><input type="radio" name = "Radio" value="electric" onchange="validateServ(this.value)">$250 - Electric Motor Installation</label>
                     </div>
                 </div>
                 <div class="card">
@@ -256,9 +256,9 @@ https://stackoverflow.com/questions/6402743/regular-expression-for-mm-dd-yyyy-in
                         <div class="card-body">
                           <div class="card-body">
                               <p>West Coast's Mechanics</p>
-                              <label><input type="radio" name = "Radio" value="samMech" onchange ="validateMech(this.value)"> Sam The Artist</label><br>
-                              <label><input type="radio" name = "Radio" value="jamesMech" onchange = "validateMech(this.value)">James The Bike Whisperer</label><br>
-                              <label><input type="radio" name = "Radio" value="leviMech" onchange = "validateMech(this.value)">Levi The Guru</label><br>
+                              <label><input type="radio" name = "rad" value="samMech" onchange ="validateMech(this.value)"> Sam The Artist</label><br>
+                              <label><input type="radio" name = "rad" value="jamesMech" onchange = "validateMech(this.value)">James The Bike Whisperer</label><br>
+                              <label><input type="radio" name = "rad" value="leviMech" onchange = "validateMech(this.value)">Levi The Guru</label><br>
                           </div>
                         </div>
                     </div>
@@ -296,7 +296,7 @@ https://stackoverflow.com/questions/6402743/regular-expression-for-mm-dd-yyyy-in
                         <input type="text" value = "abc@123.com" id="email" name="a1" title="We ask for your email in case there are any changes to your appointment"><br><br><br>
 
 
-                        <button type="button" class="btn btn-primary" onclick="appcreated">Book Appointment</button>
+                        <button type="button" class="btn btn-primary" onclick="book()">Book Appointment</button><p id="message"></p>
                     </div>
                 </div>
             </div>
