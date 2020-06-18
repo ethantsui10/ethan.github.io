@@ -145,10 +145,25 @@ const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
     // Sunday is Day 0, disable all Sundays
-    if (date.getDay() == 0)
-        return [false];
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) == -1 ]
+    // if (date.getDay() == 0)
+    //     return [false];
+    // var string = jQuery.datepicker.formatDate(setDateFormat, date);
+    if(x ==2){
+      return [date.getDay()!= 0 && date.getDay()!= 2 && date.getDay()!=5];
+    }
+    else if(x==1){
+      return [date.getDay()!= 0 && date.getDay()!= 4];
+    }
+    else if(x==0){
+      return [date.getDay()!= 1 && date.getDay()!= 3 && date.getDay()!=6];
+    }else{
+      return[true];
+    }
+
+
+
+
+
 }
 
 
