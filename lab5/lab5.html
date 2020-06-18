@@ -13,6 +13,12 @@
 <!-- HydroDip IMG https://twitter.com/AquaGraphixUK/status/837422094782709760/photo/1 -->
 <!-- CENTER IMAGE Source https://stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-bootstrap -->
 
+<!-- REGEX SOURCE: https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests
+https://stackoverflow.com/questions/5963182/how-to-remove-spaces-from-a-string-using-javascript
+https://www.w3schools.com/jsref/jsref_string.asp
+https://stackoverflow.com/questions/9011524/regex-to-check-whether-a-string-contains-only-numbers
+https://stackoverflow.com/questions/6402743/regular-expression-for-mm-dd-yyyy-in-javascript-->
+
 
 
 
@@ -27,9 +33,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="lab5.js"></script>
 
     <!-- Your own additional style sheet -->
     <link href="lab5theme.css" rel="stylesheet" type="text/css">
+
 </head>
 
 
@@ -40,32 +51,38 @@
     <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
     <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
     <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
-    <div class="container-md p-3 my-3 border bg-dark text-white">
+    <!-- <div class="container-md p-3 my-3 border bg-dark text-white">
         <h1>West Coast Bike Shop</h1>
         <p>We'll make you speedy!</p>
         <p>123 Main Street, Vancouver, B.C., Canada</p>
-    </div>
+    </div> -->
 
-    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
-    <!-- It can be useful for placement of information -->
-    <!-- <div class="row p-3">
-        <div class="col-sm-3 pl-5">Service</div>
-        <div class="col-sm-3">Calendar</div>
-        <div class="col-sm-3">Payment</div>
-        <div class="col-sm-3">Where to find us<br>
-          123 Main Street, Vancouver, B.C., Canada
-
+    <!-- <div class="container-md border bg-dark text-white"> -->
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark" id="nav">
+        <a class="navbar-brand" href="#"><h2>West Coast Bike Shop</h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#services"><img src="icons.png" alt="logo" style="width:30px;">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery"><img src="iconp.png" alt="logo" style="width:30px;">Photo Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#bookapp"><img src="iconb.png" alt="logo" style="width:30px;">Book an Appointment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mech"><img src="iconm.png" alt="logo" style="width:30px;">Our Mechanics</a>
+            </li>
+         </ul>
         </div>
-    </div> -->
+      </nav>
+    </div>
+    <br>
 
-    <!-- When you have messages to tell, remember that center align is not always the best choice -->
-    <!-- <div class="container-md p-3 my-3 border bg-light text-success">
-        <h3>Let us tell you about our expertise</h3>
-        <p>We can <mark>cut hair</mark></p>
-        <p class="text-center" >Align wheels</p>
-        <p class="text-uppercase">Write in uppercase</p>
-        <p class="text-center text-uppercase" >centered and uppercase</p>
-    </div> -->
     <div class="container">
         <h2>Welcome to the Shop!</h2>
         <p>West Coast Bike Shop is tailored to your bike needs! Please feel free to check out our store at, 123 Main Street, Vancouver, B.C., Canada! Also check out our services that we have to offer as well as some of our staff that run the shop!</p>
@@ -76,8 +93,8 @@
 
     <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
     <!-- Might be (or not) useful to show some information to the user -->
-    <div class="container">
-        <h2>Services</h2>
+    <div class="container" id ="services">
+        <h2><img src="icons.png" alt="logo" style="width:50px;">Services</h2>
         <p>Here is a list of services offered at West Coast Bike Shop</p>
         <table class=" table table-dark">
             <thead>
@@ -115,7 +132,7 @@
 
 
     <div class="container" id="gallery">
-      <h2>Service Photo Gallery</h2>
+      <h2><img src="iconp.png" alt="logo" style="width:50px;">Service Photo Gallery</h2>
       <p>Check out images of our services!</p>
       <div class="card-columns">
         <div class="card bg-dark" style="width:350px">
@@ -212,9 +229,9 @@
         </div>
     </div> -->
 
-    <div class="container">
+    <div class="container" id ="bookapp">
         <!-- <div class="container-md p-3 my-3 border bg-warning text-white"> -->
-            <h2>Book an Appointment with us</h2>
+            <h2><img src="iconb.png" alt="logo" style="width:50px;">Book an Appointment with us</h2>
             <p>To save yourself time, book an appointment with us!</p>
         <!-- </div> -->
         <div id="accordion">
@@ -231,9 +248,24 @@
                         <label><input type="radio" name = "Radio" value="Security">$250 - The security of the site</label>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseMech">Choose a mechanic</a>
+                    </div>
+                    <div id="collapseMech" class="collapse" data-parent="#accordion"  >
+                        <div class="card-body">
+                          <div class="card-body">
+                              <p>West Coast's Mechanics</p>
+                              <label><input type="radio" name = "Radio" value="samMech" onchange ="validateMech(this.value)"> Sam The Artist</label><br>
+                              <label><input type="radio" name = "Radio" value="jamesMech" onchange = "validateMech(this.value)">James The Bike Whisperer</label><br>
+                              <label><input type="radio" name = "Radio" value="leviMech" onchange = "validateMech(this.value)">Levi The Guru</label><br>
+                          </div>
+                        </div>
+                    </div>
+                </div>
             <div class="card">
                 <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date </a>
                 </div>
                 <div id="collapseDate" class="collapse" data-parent="#accordion">
                     <div class="card-body">
@@ -243,7 +275,7 @@
                         <div class="form-group row">
                             <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
                             <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="06/06/2020 1:00 PM " id="dateTimeInput">
+                                <input class="form-control" type="datetime-local" value="06/06/2020" id="dateTimeInput">
                             </div>
                         </div>
                     </div>
@@ -251,29 +283,19 @@
             </div>
             <div class="card">
                 <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a mechanic</a>
-                </div>
-                <div id="collapseDate" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                      <div class="card-body">
-                          <p>West Coast's Mechanics</p>
-                          <label><input type="radio" name = "Radio" value="simplicity"> Sam The Artist</label><br>
-                          <label><input type="radio" name = "Radio" value="Color Scheme">James The Bike Whisperer</label><br>
-                          <label><input type="radio" name = "Radio" value="Efficiency">Levi The Guru</label><br>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Payment and Information</a>
                 </div>
                 <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
                     <div class="card-body">
-                        <p>Provide your information so we can contact you</p>
+                        <p>Provide your payment information and email below</p>
+                        <label for = "credit">Please enter your credit card number:</label><br>
+                        <input type="text" value = "1234 1234 1234 1234"id="credit" name="a1" title="We ask for your credit card number in case of no-show, 20$ will be charged."><br><br>
+
                         <!-- <p>Form to enter name, email, phone</p> -->
                         <label for = "email">Please enter your email address below:</label><br>
-                        <input type="text" id="email" name="a1"><br><br>
+                        <input type="text" value = "abc@123.com" id="email" name="a1" title="We ask for your email in case there are any changes to your appointment"><br><br>
+
+
                         <button type="button" class="btn btn-primary">Book Appointment</button>
                     </div>
                 </div>
@@ -287,7 +309,7 @@
     <!-- The first card's button doesn't go anywhere, it could be a modal -->
     <!-- My second card limits the information seen and uses collapsible to show more -->
     <div class="container" id ="mech">
-        <h2>Meet Our Mechanics</h2>
+        <h2><img src="iconm.png" alt="logo" style="width:50px;">Meet Our Mechanics</h2>
         <div class="card-columns">
             <!-- <div class="card bg-warning" style="width:200px">
                 <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
@@ -335,6 +357,8 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
 
 
     <!-- A different approach would be to make the whole staff information collapsible -->
@@ -358,7 +382,10 @@
     <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
     <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
     <!-- could work well.  You can use other patterns too.  This is just an example. -->
-
+    <footer>
+      <a href="https://icons8.com/icon/110192/services">Services icon by Icons8</a>
+    </footer>
 
 </body>
+
 </html>

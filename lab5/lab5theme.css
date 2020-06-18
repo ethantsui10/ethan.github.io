@@ -10,6 +10,15 @@ h1 {
 
 }
 
+.showInput {
+  background-color: lightgrey;
+}
+
+.error {
+  background-color: white;
+  color : red;
+}
+
 #mech .card-title {
   color: white;
 }
@@ -25,4 +34,4 @@ h1 {
 
 #gallery .card-body p{
   color: white;
-}
+}\
