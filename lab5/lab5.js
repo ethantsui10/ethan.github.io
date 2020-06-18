@@ -258,13 +258,7 @@ $(document).ready(function(){
         }
     );
 
-    $("#dateTimeInput").on("mouseenter", function(){
-        $("#dateTimeInput").addClass("showInput");
-    });
 
-    $("#dateTimeInput").on("mouseleave", function(){
-        $("#dateTimeInput").removeClass("showInput");
-    });
 
 
     // Look at the different events on which an action can be performed
@@ -339,24 +333,24 @@ $(document).ready(function(){
 
 
 
-        // $("#dateTimeInput").on("change", function(){
-        //     if (!validateDate("dateTimeInput")){
-        //         alert("Wrong format for date");
-        //         $("#dateTimeInput").val("mm/dd/yyyy");
-        //         $("#dateTimeInput").addClass("error");
-        //     }
-        //     else {
-        //         $("#dateTimeInput").removeClass("error");
-        //     }
-        // });
-        //
-        // $("#dateTimeInput").on("mouseenter", function(){
-        //     $("#dateTimeInput").addClass("showInput");
-        // });
-        //
-        // $("#dateTimeInput").on("mouseleave", function(){
-        //     $("#dateTimeInput").removeClass("showInput");
-        // });
+        $("#dateTimeInput").on("change", function(){
+            if (!validateDate("dateTimeInput")){
+                alert("Wrong format for date");
+                $("#dateTimeInput").val("mm/dd/yyyy");
+                $("#dateTimeInput").addClass("error");
+            }
+            else {
+                $("#dateTimeInput").removeClass("error");
+            }
+        });
+
+        $("#dateTimeInput").on("mouseenter", function(){
+            $("#dateTimeInput").addClass("showInput");
+        });
+
+        $("#dateTimeInput").on("mouseleave", function(){
+            $("#dateTimeInput").removeClass("showInput");
+        });
         //
         //
         //
