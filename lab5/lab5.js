@@ -8,6 +8,7 @@
 // Regular expressions can get complex, you can think in terms of a series of characters
 // or numbers
 var x = null;
+var y = null;
 
 
 function validatePhone(txtPhone) {
@@ -72,6 +73,10 @@ function validateDate(txtDate) {
     else {
         return false;
     }
+}
+
+function validateServ(serv){
+
 }
 
 function validateMech(mech){
