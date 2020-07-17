@@ -1,0 +1,49 @@
+
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+/* Bootstrap default font-family is Helvetica Neue */
+h1 {
+  font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+  text-shadow: 3px 3px 1px black;
+
+}
+
+.showInput {
+  background-color: lightgrey;
+}
+
+.error {
+  background-color: white;
+  color : red;
+}
+
+#mech .card-title {
+  color: white;
+}
+
+#mech .card-text{
+  color: white;
+}
+
+#mech .card-body p{
+  color: white;
+}
+
+
+#gallery .card-body p{
+  color: white;
+}
+
+
+
+.ui-tooltip{
+  margin-left: auto;
+
+}
+
+.ui-tooltip-content {
+  text-align: center;
+
+}
